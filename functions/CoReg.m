@@ -96,6 +96,9 @@ else
             ' --mov ' output_mean ...
             ' --reg ' output_lta]);
 
+        brainmask_file_bids = fullfile(output_dir, subj, ses, ...
+            'anat', [subj '_' ses '_space-T1w_desc-brain_mask.nii.gz']);
+            
         % Write metadata to json
         coreg = struct;
         coreg.Description = 'Registration file to go from PET space to ANAT space';
